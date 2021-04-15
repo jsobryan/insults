@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: #FCBF49;
+}
+
+.container {
+    background-color: #003049;
+    color: #fff;
+    padding: 15px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+p {
+    font-size: 30px;
+}
+
+.line {
+    border-bottom: 3px solid #fff;
+    margin: 0 150px;
+}
+
+.btn {
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 25px;
+    outline: 0;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #D62828;
+    color: #fff;
+}
