@@ -824,12 +824,10 @@ adjectives_b = [
 'zipper',
 'bang',
 'hole',
-'holes',
 'master',
 'plunderer',
 'munch',
 'wipe',
-'wipes',
 'plunger',
 'lover',
 'muffin',
@@ -914,7 +912,6 @@ adjectives_b = [
 'masturbator',
 'measurer',
 'meddler',
-'messer',
 'miller',
 'misbrander',
 'mixer',
@@ -1107,50 +1104,57 @@ adjectives_b = [
 'stasher',
 'stealer',
 'stopper',
+'catcher',
+'puppet',
+'muppet',
 ]
 
 adjectives_c = [
-    '-faced',
-    '-nosed',
-    '-stained',
-    '-brained',
-    '-girdled',
-    '-worshipping',
-    '-loving',
-    '-fondling',
-    '-slurping',
-    '-sucking',
-    '-fucking',
-    '-licking',
-    '-smelling',
-    '-wiping',
-    '-conjuring',
-    '-tasting',
-    '-reeking',
-    '-inhaling',
-    '-smoking',
-    '-bothering',
-    '-fellating',
-    '-headed',
-    '-jerking',
-    '-humping',
-    '-farming',
-    '-eating',
-    '-drinking',
-    '-felching',
-    '-boning',
-    '-boned',
-    '-whacking',
-    '-stabbing',
-    '-biting',
-    '-whipping',
-    '-forging',
-    '-blazing',
-    '-guzzling',
-    '-smuggling',
-    '-herding',
-    '-commanding',
-    '-beating',
+'-faced',
+'-nosed',
+'-stained',
+'-brained',
+'-girdled',
+'-worshipping',
+'-loving',
+'-fondling',
+'-slurping',
+'-sucking',
+'-fucking',
+'-licking',
+'-smelling',
+'-wiping',
+'-conjuring',
+'-tasting',
+'-reeking',
+'-inhaling',
+'-smoking',
+'-bothering',
+'-fellating',
+'-headed',
+'-jerking',
+'-humping',
+'-farming',
+'-eating',
+'-drinking',
+'-felching',
+'-boning',
+'-boned',
+'-whacking',
+'-stabbing',
+'-biting',
+'-whipping',
+'-forging',
+'-blazing',
+'-guzzling',
+'-smuggling',
+'-herding',
+'-commanding',
+'-beating',
+'-huffing',
+'-snuffling',
+'-stuffing',
+'-scraping',
 ]
 
 
@@ -1323,6 +1327,17 @@ function rando(wordList) {
     return randomChoice.toLowerCase();
     }
 
-const insult = `${rando(negadj)} ${rando(negadj)} ${rando(negadj)} ${rando(adjectives_a)}${rando(adjectives_c)} ${rando(adjectives_a)}${rando(adjectives_b)}`
+function randomInsult() {
+    const insult = `${rando(negadj)} ${rando(negadj)} ${rando(negadj)} ${rando(adjectives_a)}${rando(adjectives_c)} ${rando(adjectives_a)}${rando(adjectives_b)}`
 
-document.getElementById('insult').textContent = insult;
+    return insult;
+}
+
+
+
+document.querySelector('button').addEventListener('click', onClick);
+
+function onClick(e) {
+
+    document.getElementById('insult').textContent = randomInsult();
+}

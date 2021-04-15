@@ -17,11 +17,16 @@ body {
 .container {
     background-color: #003049;
     color: #fff;
-    padding: 15px;
-    margin: 10px;
+    padding: 30px;
+    margin: 20px;
     justify-content: center;
     align-items: center;
     text-align: center;
+    box-shadow: 10px 5px 10px rgba(0,0,0,0.5);
+
+    h2 {
+        font-size: 2rem;
+    }
 }
 
 p {
@@ -42,4 +47,10 @@ p {
     text-align: center;
     background-color: #D62828;
     color: #fff;
+
+    &:hover {
+        transform: scale(.98);
+        transition: .4s;
+        background-color: #b12727;
+    }
 }
